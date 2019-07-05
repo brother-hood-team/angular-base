@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-base",
+            "outputPath": "dist/angular-base-en",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,6 +56,36 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "production-es": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/angular-base-es/",
+              "i18nFile": "src/i18n/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            },
+            "es": {
+              "aot": true,
+              "outputPath": "dist/angular-base-es/",
+              "i18nFile": "src/i18n/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -65,6 +95,9 @@
             "browserTarget": "angular-base:build"
           },
           "configurations": {
+            "es": {
+              "browserTarget": "angular-base:build:es"
+            },
             "production": {
               "browserTarget": "angular-base:build:production"
             }
