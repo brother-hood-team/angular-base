@@ -25,7 +25,7 @@ export function reducer(
                 errorMessage: action.payload
             };
         }
-        case Auth.ActionTypes.LOGOUT: {
+        case Auth.ActionTypes.LOGOUT_SUCCESS: {
             return {
                 ...state,
                 user_credentials: null,

@@ -33,7 +33,7 @@ export class AuthenticationService {
     }
 
     public logout() {
-        localStorage.removeItem('currentUser');
+      //  localStorage.removeItem('currentUser');
         // this.router.navigate(['/login']);
     }
 

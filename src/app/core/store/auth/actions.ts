@@ -5,7 +5,8 @@ export enum ActionTypes {
     LOGIN = '[Auth] Login',
     LOGIN_SUCCESS = '[Auth] Login Success',
     LOGIN_FAILURE = '[Auth] Login Failure',
-    LOGOUT = '[Auth] Logout'
+    LOGOUT = '[Auth] Logout',
+    LOGOUT_SUCCESS = '[Auth] Logout Success'
 }
 
 export class Login implements Action {
@@ -32,5 +33,8 @@ export class LoginFailure implements Action {
 export class Logout implements Action {
     readonly type = ActionTypes.LOGOUT;
 }
+export class LogoutSuccess implements Action {
+  readonly type = ActionTypes.LOGOUT_SUCCESS;
+}
 
-export type ActionsUnion = Login | LoginSuccess | LoginFailure | Logout;
+export type ActionsUnion = Login | LoginSuccess | LoginFailure | Logout | LogoutSuccess;
