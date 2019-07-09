@@ -1,1 +1,1 @@
-export const persistStoreModules = [];
+export const persistStoreModules = ['router'];

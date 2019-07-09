@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Login, Logout } from './core/store/auth/actions';
-import { IAuthState } from './core/models/IAuth';
+import {Component} from '@angular/core';
+import {Store} from '@ngrx/store';
+import {Login, Logout} from './core/store/auth/actions';
+import {IAuthState} from './core/models/IAuth';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
