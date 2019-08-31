@@ -15,4 +15,3 @@ export function localStorageSyncReducer(reducer: ActionReducer<any>): ActionRedu
  * that will be composed to form the root meta-reducer.
  */
 export const metaReducers: MetaReducer<State>[] = [localStorageSyncReducer];
-

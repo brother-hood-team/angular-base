@@ -9,6 +9,7 @@ import { BadRequestError } from '../../errors/badrequest.error';
 import { NotFoundError } from '../../errors/notfound.error';
 import { UnknownError } from '../../errors/unknown.error';
 import { UnAuthorizedError } from '../../errors/unauthorized.error';
+import { NetworkError } from '../../errors/network.error';
 
 @Injectable()
 export class Oauth2Interceptor implements HttpInterceptor {
@@ -86,6 +87,9 @@ export class Oauth2Interceptor implements HttpInterceptor {
           return throwError(new BadRequestError(err));
         case 404:
           return throwError(new NotFoundError(err));
+        default: {
+          return throwError(new NetworkError(err));
+        }
       }
     } else {
       return throwError(new UnknownError(err));
